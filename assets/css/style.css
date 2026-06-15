@@ -315,7 +315,7 @@ HOME HERO
 .hero{
     position:relative;
     min-height:850px;
-    background:url('assets/images/hero.jpg') center center/cover no-repeat;
+    background:url('assets/hero/hero.jpg') center center/cover no-repeat;
     display:flex;
     align-items:center;
 }
