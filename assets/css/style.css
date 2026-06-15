@@ -1,1 +1,459 @@
+/* ==================================================
+LERATO KA MIHLA MAINTENANCE SERVICES
+MASTER STYLESHEET
+PART 1
+================================================== */
 
+/* ==================================================
+ROOT VARIABLES
+================================================== */
+
+:root {
+
+    --navy: #002B6B;
+    --yellow: #F4B400;
+    --green: #1F7A3D;
+    --red: #8B1E1E;
+
+    --white: #ffffff;
+    --black: #111111;
+
+    --gray-100: #f7f7f7;
+    --gray-200: #efefef;
+    --gray-300: #dddddd;
+    --gray-500: #777777;
+    --gray-700: #444444;
+    --gray-900: #222222;
+
+    --shadow-sm: 0 5px 15px rgba(0,0,0,.08);
+    --shadow-md: 0 10px 30px rgba(0,0,0,.10);
+    --shadow-lg: 0 20px 50px rgba(0,0,0,.15);
+
+    --transition: .3s ease;
+
+    --max-width: 1300px;
+
+}
+
+/* ==================================================
+RESET
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    line-height:1.6;
+    color:var(--gray-700);
+    overflow-x:hidden;
+    background:#fff;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+/* ==================================================
+CONTAINER
+================================================== */
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+}
+
+/* ==================================================
+TYPOGRAPHY
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    color:var(--gray-900);
+    line-height:1.2;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-heading span{
+    color:var(--red);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.section-heading h2{
+    font-size:48px;
+    margin-top:10px;
+    font-weight:800;
+}
+
+/* ==================================================
+TOP BAR
+================================================== */
+
+.topbar{
+    background:var(--navy);
+    color:white;
+    padding:12px 0;
+    font-size:14px;
+}
+
+.topbar-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.topbar-left{
+    display:flex;
+    gap:30px;
+}
+
+.topbar-right{
+    font-weight:600;
+}
+
+/* ==================================================
+HEADER
+================================================== */
+
+.header{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:var(--shadow-sm);
+}
+
+.header-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100px;
+}
+
+.logo{
+    height:75px;
+    width:auto;
+}
+
+/* ==================================================
+DESKTOP NAVIGATION
+================================================== */
+
+.desktop-nav{
+    display:flex;
+    gap:35px;
+}
+
+.desktop-nav a{
+    color:var(--gray-900);
+    font-weight:600;
+    transition:var(--transition);
+    position:relative;
+}
+
+.desktop-nav a:hover{
+    color:var(--navy);
+}
+
+.desktop-nav a.active{
+    color:var(--navy);
+}
+
+.desktop-nav a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:3px;
+    background:var(--yellow);
+}
+
+/* ==================================================
+HEADER ACTIONS
+================================================== */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.quote-btn{
+    background:var(--yellow);
+    color:black;
+    padding:14px 28px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.quote-btn:hover{
+    background:var(--navy);
+    color:white;
+}
+
+.mobile-toggle{
+    display:none;
+    background:none;
+    font-size:30px;
+}
+
+/* ==================================================
+MOBILE MENU
+================================================== */
+
+.mobile-menu{
+    display:none;
+    background:white;
+    border-top:1px solid #eee;
+}
+
+.mobile-menu.active{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:18px 25px;
+    color:var(--gray-900);
+    border-bottom:1px solid #eee;
+    font-weight:600;
+}
+
+.mobile-menu a:hover{
+    background:var(--gray-100);
+}
+
+/* ==================================================
+BUTTONS
+================================================== */
+
+.btn-primary{
+    display:inline-block;
+    background:var(--yellow);
+    color:black;
+    padding:16px 34px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.btn-primary:hover{
+    background:var(--navy);
+    color:white;
+}
+
+.btn-secondary{
+    display:inline-block;
+    border:2px solid white;
+    color:white;
+    padding:16px 34px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:var(--navy);
+}
+
+.btn-dark{
+    display:inline-block;
+    background:var(--navy);
+    color:white;
+    padding:16px 34px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.btn-dark:hover{
+    background:var(--yellow);
+    color:black;
+}
+
+/* ==================================================
+HOME HERO
+================================================== */
+
+.hero{
+    position:relative;
+    min-height:850px;
+    background:url('../images/hero.jpg') center center/cover no-repeat;
+    display:flex;
+    align-items:center;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.60);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    display:grid;
+    grid-template-columns:1.5fr .8fr;
+    gap:60px;
+
+    align-items:center;
+}
+
+.hero-left{
+    color:white;
+}
+
+.hero-tagline{
+    color:var(--yellow);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-left h1{
+    color:white;
+    font-size:72px;
+    font-weight:900;
+    margin-bottom:25px;
+}
+
+.hero-description{
+    color:white;
+    max-width:700px;
+    font-size:22px;
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+/* ==================================================
+HERO CONTACT CARD
+================================================== */
+
+.hero-card{
+    background:white;
+    padding:45px;
+    box-shadow:var(--shadow-lg);
+}
+
+.hero-card h3{
+    font-size:28px;
+    margin-bottom:25px;
+    color:var(--navy);
+}
+
+.hero-contact-item{
+    margin-bottom:18px;
+    font-size:16px;
+}
+
+.hero-card-btn{
+    display:block;
+    text-align:center;
+    background:var(--red);
+    color:white;
+    padding:16px;
+    margin-top:25px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.hero-card-btn:hover{
+    background:var(--navy);
+}
+
+/* ==================================================
+PAGE HERO
+================================================== */
+
+.page-hero{
+    position:relative;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.page-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.page-hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.page-hero-content h1{
+    color:white;
+    font-size:68px;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.page-hero-content p{
+    color:white;
+    font-size:22px;
+}
+
+/* PAGE BACKGROUNDS */
+
+.services-hero{
+    background:url('../images/services-hero.jpg')
+    center center/cover no-repeat;
+}
+
+.projects-hero{
+    background:url('../images/projects-hero.jpg')
+    center center/cover no-repeat;
+}
+
+.contact-hero{
+    background:url('../images/contact-hero.jpg')
+    center center/cover no-repeat;
+}
