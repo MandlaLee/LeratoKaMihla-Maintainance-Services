@@ -315,7 +315,7 @@ HOME HERO
 .hero{
     position:relative;
     min-height:850px;
-    background:url('assets/hero/hero.jpg') center center/cover no-repeat;
+    background:url('../hero/hero.jpg') center center/cover no-repeat;
     display:flex;
     align-items:center;
 }
@@ -444,17 +444,17 @@ PAGE HERO
 /* PAGE BACKGROUNDS */
 
 .services-hero{
-    background:url('assets/images/services-hero.jpg')
+    background:url('assets/hero/services.jpg')
     center center/cover no-repeat;
 }
 
 .projects-hero{
-    background:url('assets/images/projects-hero.jpg')
+    background:url('assets/hero/projects.jpg')
     center center/cover no-repeat;
 }
 
 .contact-hero{
-    background:url('assets/images/contact-hero.jpg')
+    background:url('assets/hero/contact.jpg')
     center center/cover no-repeat;
 }
 
