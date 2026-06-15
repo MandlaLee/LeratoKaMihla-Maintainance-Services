@@ -444,17 +444,17 @@ PAGE HERO
 /* PAGE BACKGROUNDS */
 
 .services-hero{
-    background:url('assets/hero/services.jpg')
+    background:url('../hero/services.jpg')
     center center/cover no-repeat;
 }
 
 .projects-hero{
-    background:url('assets/hero/projects.jpg')
+    background:url('../hero/projects.jpg')
     center center/cover no-repeat;
 }
 
 .contact-hero{
-    background:url('assets/hero/contact.jpg')
+    background:url('../hero/contact.jpg')
     center center/cover no-repeat;
 }
 
